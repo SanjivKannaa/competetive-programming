@@ -11,7 +11,7 @@ for __ in range(int(input())):
             a.append(len(d))
             occured.append(b[i])
         else:
-            for j in d.keys():
+            for j in list(d.keys()):
                 if d[j][0] == b[i]:
                     if d[j][1]<=d[j][0]:
                         # print(0)
@@ -25,7 +25,14 @@ for __ in range(int(input())):
     # print()
     # print()
     # print()
-    print(a)
+    val = 1
+    for i in list(d.keys()):
+        if d[i][0] != d[i][1]:
+            val = 0
+            print(-1)
+            break
+    if val:
+        print(a)
 
 
 # 5
