@@ -1,5 +1,10 @@
 from itertools import permutations as p
 
+def f(i):
+    if i%1>=0.5:
+        return int(i)+1
+    return int(i)
+
 for __ in range(int(input())):
     a = [int(i) for i in input().split()]
     n = a[0] + a[1]
@@ -10,7 +15,9 @@ for __ in range(int(input())):
     number_of_p = 0
     for i in list(p(l)):
         number_of_p += 1
-        for j in range(n//2):
-            sum_ += int(l[j])
+        for j in range((n//2)):
+            sum_ += int(i[j])
+    print(sum_, number_of_p)
     sum_ = sum_/number_of_p
-    print(int(sum_))
+    # print(sum_, number_of_p)
+    print(f(998244353 * sum_))
