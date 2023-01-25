@@ -8,4 +8,9 @@ for __ in range(int(input())):
             even.append(i)
         else:
             odd.append(i)
-    
+    if len(even) >= 2 and len(odd)>=1:
+        print("YES")
+        print(even[0]+1, even[1]+1, odd[0]+1)
+    elif len(odd) >= 3:
+        print("NO")
+        print(odd[0]+1, odd[1]+1, odd[2]+1)
