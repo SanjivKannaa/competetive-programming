@@ -12,5 +12,7 @@ for __ in range(int(input())):
         print("YES")
         print(even[0]+1, even[1]+1, odd[0]+1)
     elif len(odd) >= 3:
-        print("NO")
+        print("YES")
         print(odd[0]+1, odd[1]+1, odd[2]+1)
+    else:
+        print("NO")
